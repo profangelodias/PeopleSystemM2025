@@ -7,7 +7,7 @@ import java.time.Period;
 public class Pessoa {
     protected String nome;
     protected LocalDate dataNascimento;
-    protected Telefone telsContato;
+    protected ListaDeTelefonesNaoOrdenados telsContato;
     protected Endereco endereco;
 
     public int obterIdade(){
