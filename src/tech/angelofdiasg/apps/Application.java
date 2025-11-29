@@ -12,22 +12,40 @@ public class Application { // início da classe Application
         Funcionario func1 = new Funcionario();
         func1.setNome("Carlos Silva");
         func1.setDataNascimento(LocalDate.of(1985, 5, 20));
-        Telefone telFunc1 = new Telefone("11", "78888-7777");
-        Telefone telFunc2 = new Telefone("21", "88888-7777");
-        Telefone telFunc3 = new Telefone("31", "98888-7777");
+        Telefone residencial = new Telefone("11", "78888-7777");
+        Telefone celular = new Telefone("21", "88888-7777");
+        Telefone empresarial = new Telefone("31", "98888-7777");
 
-        ListaDeTelefonesNaoOrdenados lista1 = new ListaDeTelefonesNaoOrdenados();
+//        ListaDeTelefonesNaoOrdenados lista1 = new ListaDeTelefonesNaoOrdenados();//        lista1.adicionarTelefone(telFunc1);
+//        lista1.adicionarTelefone(telFunc2);
+//        lista1.adicionarTelefone(telFunc3);
+//        func1.setTelsContato(lista1);
 
-        lista1.adicionarTelefone(telFunc1);
-        lista1.adicionarTelefone(telFunc2);
-        lista1.adicionarTelefone(telFunc3);
+        System.out.println("lista de Telefones Vazio: " + func1.getTelsContato());
 
-        func1.setTelsContato(lista1);
-        System.out.println("lista completa " + func1.getTelsContato());
+        func1.adicionarTelefone(residencial);
+        System.out.println("lista de Telefones " + func1.getTelsContato());
+        func1.adicionarTelefone(celular);
+        System.out.println("lista de Telefones " + func1.getTelsContato());
+        func1.adicionarTelefone(empresarial);
+        System.out.println("lista de Telefones " + func1.getTelsContato());
 
-        func1.getTelsContato().removerTelefone(telFunc1);
+        func1.getTelsContato().remove(residencial);
 
-        System.out.println("lista incompleta " + func1.getTelsContato());
+        System.out.println("lista de Telefones " + func1.getTelsContato());
+
+        //NA APLICAÇÃO
+        // CRIAR MAIS 3 FUNCIONÁRIOS
+        // CRIAR UMA LISTA COM TODOS ELES
+        // IMPRIMIR OS APENAS O NOME DOS FUNCIONARIOS DA LISTA
+        // LIMPAR A LISTA.
+
+
+//        System.out.println("lista de Telefones " + func1.getTelsContato());
+
+//        func1.getTelsContato().removerTelefone(telFunc1);
+
+//        System.out.println("lista incompleta " + func1.getTelsContato());
 
         Endereco endFunc1 = new Endereco("Avenida Central", "Apto 101",
                 "100", "Centro", "Rio de Janeiro", "20000000");

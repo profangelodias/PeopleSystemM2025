@@ -5,11 +5,14 @@ import tech.angelofdiasg.estruturas.ListaDeTelefonesNaoOrdenados;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pessoa {
     protected String nome;
     protected LocalDate dataNascimento;
-    protected ListaDeTelefonesNaoOrdenados telsContato;
+//    protected ListaDeTelefonesNaoOrdenados telsContato;
+    protected List<Telefone> telsContato = new ArrayList<>();
     protected Endereco endereco;
 
     public int obterIdade(){
@@ -36,12 +39,20 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public ListaDeTelefonesNaoOrdenados getTelsContato() {
+//    public ListaDeTelefonesNaoOrdenados getTelsContato() {
+//        return telsContato;
+//    }
+
+    public List<Telefone> getTelsContato() {
         return telsContato;
     }
 
-    public void setTelsContato(ListaDeTelefonesNaoOrdenados telsContato) {
-        this.telsContato = telsContato;
+//    public void setTelsContato(ListaDeTelefonesNaoOrdenados telsContato) {
+//        this.telsContato = telsContato;
+//    }
+
+    public void adicionarTelefone(Telefone telefone) {
+        this.telsContato.add(telefone);
     }
 
     public Endereco getEndereco() {
