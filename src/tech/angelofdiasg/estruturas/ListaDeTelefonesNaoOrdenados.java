@@ -2,13 +2,15 @@ package tech.angelofdiasg.estruturas;
 
 import tech.angelofdiasg.auxs.Telefone;
 
+import java.util.Arrays;
+
 public class ListaDeTelefonesNaoOrdenados {
     //Vetor de telefones onde criaremos nossa lista
     private Telefone[] telefones;
     //Controlar o tamanho da lista - O QUANTO EU JÁ GUARDEI
     private int tamanhoLista;
     //Capacidade inicial de 3 elementos (pode ser alterada depois) - O QUANTO EU POSSO GUARDAR
-    private static final int CAPACIDADE_PADRAO = 2;
+    private static final int CAPACIDADE_PADRAO = 3;
     //Nosso código robusto para garantir capacidade
     private int capacidadePadrao = CAPACIDADE_PADRAO;
 
@@ -52,8 +54,9 @@ public class ListaDeTelefonesNaoOrdenados {
             this.tamanhoLista = tamanhoLista -1;
             telefones[tamanhoLista] = null; // Limpar a última posição
             System.out.println("Telefone " + telefone + " removido com sucesso.");
+        } else {
+            System.out.println("Não tem o " + telefone + " para ser removido.");
         }
-        System.out.println("Não tem o " + telefone + " para ser removido.");
     }
 
     //Procurar o indice(index) do telefone no VETOR
@@ -69,4 +72,10 @@ public class ListaDeTelefonesNaoOrdenados {
         return -1;
     }
 
+    @Override
+    public String toString() {
+        return "ListaDeTelefonesNaoOrdenados{" +
+                "telefones=" + Arrays.toString(telefones) +
+                '}';
+    }
 }

@@ -1,6 +1,8 @@
 package tech.angelofdiasg.pessoas;
 
 import tech.angelofdiasg.auxs.*;
+import tech.angelofdiasg.estruturas.ListaDeTelefonesNaoOrdenados;
+
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -34,11 +36,11 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public Telefone getTelsContato() {
+    public ListaDeTelefonesNaoOrdenados getTelsContato() {
         return telsContato;
     }
 
-    public void setTelsContato(Telefone telsContato) {
+    public void setTelsContato(ListaDeTelefonesNaoOrdenados telsContato) {
         this.telsContato = telsContato;
     }
 
