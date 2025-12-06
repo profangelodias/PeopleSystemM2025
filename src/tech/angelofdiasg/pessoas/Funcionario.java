@@ -21,6 +21,18 @@ public class Funcionario extends Pessoa{
         return this.cargo;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
     @Override
     public String toString() {
         return "Funcionario{" +
